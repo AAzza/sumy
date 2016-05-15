@@ -4,9 +4,9 @@
 Sumy - automatic text summarizer.
 
 Usage:
-    sumy (luhn | edmundson | lsa | text-rank | lex-rank) [--length=<length>] [--language=<lang>] [--stopwords=<file_path>] [--format=<format>]
-    sumy (luhn | edmundson | lsa | text-rank | lex-rank) [--length=<length>] [--language=<lang>] [--stopwords=<file_path>] [--format=<format>] --url=<url>
-    sumy (luhn | edmundson | lsa | text-rank | lex-rank) [--length=<length>] [--language=<lang>] [--stopwords=<file_path>] [--format=<format>] --file=<file_path>
+    sumy (luhn | edmundson | lsa | text-rank | lex-rank | random | sumbasic) [--length=<length>] [--language=<lang>] [--stopwords=<file_path>] [--format=<format>]
+    sumy (luhn | edmundson | lsa | text-rank | lex-rank | random | sumbasic) [--length=<length>] [--language=<lang>] [--stopwords=<file_path>] [--format=<format>] --url=<url>
+    sumy (luhn | edmundson | lsa | text-rank | lex-rank | random | sumbasic) [--length=<length>] [--language=<lang>] [--stopwords=<file_path>] [--format=<format>] --file=<file_path>
     sumy --version
     sumy --help
 
@@ -41,6 +41,8 @@ from .summarizers.edmundson import EdmundsonSummarizer
 from .summarizers.lsa import LsaSummarizer
 from .summarizers.text_rank import TextRankSummarizer
 from .summarizers.lex_rank import LexRankSummarizer
+from .summarizers.random import RandomSummarizer
+from .summarizers.sumbasic import SumBasicSummarizer
 from .nlp.stemmers import Stemmer
 
 HEADERS = {
@@ -57,6 +59,8 @@ AVAILABLE_METHODS = {
     "lsa": LsaSummarizer,
     "text-rank": TextRankSummarizer,
     "lex-rank": LexRankSummarizer,
+    "random": RandomSummarizer,
+    "sumbasic": SumBasicSummarizer,
 }
 
 
